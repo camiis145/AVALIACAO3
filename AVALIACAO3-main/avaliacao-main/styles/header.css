@@ -8,7 +8,7 @@
 }
 
 .cabecalho{
-    background-color: var(--branco);
+    background-color: var(--preto);
     display: flex;
 
     justify-content: space-between;
@@ -46,7 +46,7 @@ display: block;
     color: var(--amarelo);
 }
 .lista-menu__item{
-    background-color: blue;
+    background-color: var(--roxo-degrade);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
@@ -60,22 +60,40 @@ text-transform: uppercase;
     display: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.opcoes{
+    display: none;
+}
 @media screen and (min-width: 1024px) {
     .titulo__cabecalho{
         font-size: 30px;
         color: rgb(204, 50, 165);
-        display: block;
+        display: block;}
+    
+   .opcoes{
+        display: flex;    
     }
-    .opcoes{
-        display: flex;
-    }
-    .opcoes__item{
-        padding:0 1em;
+    .lista-menu__item{
+        padding: 0 1em;
+        color: black;
     }
     .opcoes__link{
         text-decoration: none;
-        color:var(--preto);
-
+        color: var(--preto);
     }
+    .container__imagem-transparente{
+        display: none;
+    }
+    .cabecalho__menu-hamburguer{
+        display: none;
+    }
+    .container__botao:checked~.lista-menu{
+        display: block;
+        width: auto;    
+    }
+    .opcoes__botao{
+        display: none;
+    }
+
 
 }
